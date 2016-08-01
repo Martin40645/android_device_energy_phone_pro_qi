@@ -332,13 +332,13 @@ on post-fs
     chmod 0444 /system/etc/ril/oper.lis
     setprop rild.nw.operlist /system/etc/ril/oper.lis
 
-service wmtLoader /system/bin/logwrapper /system/bin/wmt_loader
+service wmtLoader /system/bin/wmt_loader
     user root
     group root
     class main
     oneshot
 
-service conn_launcher /system/bin/logwrapper /system/bin/6620_launcher -p /system/etc/firmware/
+service conn_launcher /system/bin/6620_launcher -p /system/etc/firmware/
     user system
     group system
     class core
@@ -437,20 +437,6 @@ service thermald /system/bin/thermald
     user system
     group system
 
-service mdlogger /system/bin/mdlogger
-    class main
-    user root
-    group shell system radio sdcard_rw inet sdcard_r media_rw ccci
-    disabled
-    oneshot
-
-service dualmdlogger /system/bin/dualmdlogger
-    class main
-    user shell
-    group shell system radio sdcard_rw inet sdcard_r media_rw ccci
-    disabled
-    oneshot
-
 service emcsmdlogger /system/bin/emcsmdlogger
     class main
     user shell
@@ -479,14 +465,14 @@ service ami304d /system/bin/ami304d
     class main
 
 service memsicd /system/bin/memsicd
-     disabled
+    disabled
     user system
     group system
     class main
 
 service memsicd3416x /system/bin/memsicd3416x
      disabled
-	 user system
+    user system
     group system
     class main
 
@@ -538,22 +524,10 @@ service orientationd /system/bin/orientationd
     group system input
     class main
 
-service AcdApiDaemon /system/bin/AcdApiDaemon
-    disabled
-    user system
-    group system
-    class main
-
 service geomagneticd /system/bin/geomagneticd
     disabled
     user system
     group system input
-    class main
-
-service mc64xxd /system/bin/mc64xxd
-    disabled
-    user system
-    group system
     class main
 
 
@@ -597,6 +571,7 @@ service ipod /system/bin/ipod
     user root
     group root
     class ipo
+    disabled
 
 # CM Performance Profiles
 
