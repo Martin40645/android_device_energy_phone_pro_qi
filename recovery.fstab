@@ -4,11 +4,19 @@
 
 # New fstab, works with twrp android-5
 
-/cache            ext4       /emmc@cache
-/system           ext4       /emmc@android
-/data             ext4       /emmc@usrdata
-/boot             emmc       /dev/bootimg
-/recovery         emmc       /dev/recovery
+/boot             emmc       /dev/bootimg     flags=display="Boot";backup=1;flashimg=1
+/recovery         emmc       /dev/recovery    flags=display="Recovery";backup=1;flashimg=1
+/system           ext4       /emmc@android    flags=display="System";backup=1;flashimg=1
+/data             ext4       /emmc@usrdata    flags=display="Data";backup=1
+/cache            ext4       /emmc@cache      flags=display="Cache";backup=0
+/logo             emmc       /dev/logo        flags=display="Splash Image";backup=1;flashimg=1
+# Backup partitions
+/protect_f        ext4       /emmc@protect_f  flags=display="Protect_f";backup=1;flashimg=0
+/protect_s        ext4       /emmc@protect_s  flags=display="Protect_s";backup=1;flashimg=0
+/nvram            emmc       /dev/nvram       flags=display="NVRAM";backup=1;flashimg=0
+
+# Usb-otg
+/usb-otg          vfat       /dev/block/platform/mt_usb/sda1 flags=removable;display="USB-OTG"
 
 # Original fstab
 
