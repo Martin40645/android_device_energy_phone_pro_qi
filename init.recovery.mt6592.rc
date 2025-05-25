@@ -1,0 +1,7 @@
+# Set cyan led and buton backlight
+on init
+    write /sys/class/leds/blue/brightness 255
+    write /sys/class/leds/green/brightness 255
+    write /sys/class/leds/button-backlight/brightness 255
+
+# TODO - make backlight light up after touch and stay for 5 seconds
