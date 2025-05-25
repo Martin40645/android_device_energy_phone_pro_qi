@@ -33,6 +33,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/mediatek/mt6592/fstab.mt6592:root/fstab.mt6592 \
     device/mediatek/mt6592/init.mt6592.rc:root/init.mt6592.rc \
+    device/mediatek/mt6592/init.recovery.mt6592.rc:root/init.recovery.mt6592.rc \
     device/mediatek/mt6592/ueventd.mt6592.rc:root/ueventd.mt6592.rc \
     $(LOCAL_KERNEL):kernel
 

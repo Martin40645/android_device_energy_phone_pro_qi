@@ -16,7 +16,7 @@
 /nvram            emmc       /dev/nvram       flags=display="NVRAM";backup=1;flashimg=0
 
 # Usb-otg
-/usb-otg          vfat       /dev/block/platform/mt_usb/sda1 flags=removable;display="USB-OTG"
+/usb-otg          vfat       /dev/block/platform/mt_usb/sda1 flags=removable;storage;display="USB-OTG"
 
 # Original fstab
 
