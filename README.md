@@ -5,12 +5,11 @@
     
     # source build/envsetup.sh
     
-    # lunch cm_mt6592-eng
+    # lunch cm_phone_pro_qi-eng
 
-# recoveries
-    # . build/tools/device/makerecoveries.sh cm_mt6592-eng
-
-    # mka bootimage
 
 # full build
-    # brunch cm_mt6592-eng
+    # brunch cm_phone_pro_qi-eng
+
+This is a device tree for Energy Phone Pro Qi, full functionality with TWRP v2.8.5.0, currently working for ROM compatibily.
+TWRP has not been tested fully, expect some minor issues.
