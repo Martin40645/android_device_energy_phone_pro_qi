@@ -2,17 +2,17 @@
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := pro_qi
+PRODUCT_RELEASE_NAME := Phone Pro Qi
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/energy/pro_qi/device_pro_qi.mk)
+$(call inherit-product, device/energy/phone_pro_qi/device_pro_qi.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := pro_qi
-PRODUCT_NAME := cm_pro_qi
-PRODUCT_BRAND := ENERGY_SISTEM
-PRODUCT_MODEL := pro_qi
-PRODUCT_MANUFACTURER := ENERGY_SISTEM
+PRODUCT_DEVICE := energy_pro_qi
+PRODUCT_NAME := cm_energy_pro_qi
+PRODUCT_BRAND := Energy_Sistem
+PRODUCT_MODEL := Energy Phone Pro Qi
+PRODUCT_MANUFACTURER := Energy_Sistem

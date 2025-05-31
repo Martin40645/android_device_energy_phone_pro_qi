@@ -3,11 +3,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/energy/pro_qi/pro_qi-vendor.mk)
+$(call inherit-product-if-exists, vendor/energy/phone_pro_qi/phone_pro_qi-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-LOCAL_PATH := device/energy/pro_qi
+LOCAL_PATH := device/energy/phone_pro_qi
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else

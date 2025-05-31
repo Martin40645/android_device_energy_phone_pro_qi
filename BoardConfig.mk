@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/energy/pro_qi/AndroidBoardVendor.mk
+-include vendor/energy/phone_pro_qi/AndroidBoardVendor.mk
 
 # Device configuration
 TARGET_BOARD_PLATFORM := mt6592
@@ -37,7 +37,7 @@ BOARD_KERNEL_BASE := 0x00008000
 BOARD_KERNEL_PAGESIZE := 2048
 
 BOARD_SEPOLICY_DIRS := \
-       device/energy/pro_qi/sepolicy
+       device/energy/phone_pro_qi/sepolicy
 
 BOARD_SEPOLICY_UNION := \
        device.te \
@@ -45,17 +45,17 @@ BOARD_SEPOLICY_UNION := \
        system.te \
        file_contexts
 
-TARGET_PREBUILT_KERNEL := device/energy/pro_qi/kernel
-TARGET_RECOVERY_FSTAB := device/energy/pro_qi/recovery.fstab
+TARGET_PREBUILT_KERNEL := device/energy/phone_pro_qi/kernel
+TARGET_RECOVERY_FSTAB := device/energy/phone_pro_qi/recovery.fstab
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-BOARD_CUSTOM_BOOTIMG_MK := device/energy/pro_qi/bootimg.mk
-BOARD_MKBOOTIMG_ARGS := --board '2ee33ae'
+BOARD_CUSTOM_BOOTIMG_MK := device/energy/phone_pro_qi/bootimg.mk
+BOARD_MKBOOTIMG_ARGS := --board 2ee33ae
 
 TARGET_KMODULES := true
 
-BOARD_EGL_CFG := device/energy/pro_qi/egl.cfg
+BOARD_EGL_CFG := device/energy/phone_pro_qi/egl.cfg
 
 BOARD_CONNECTIVITY_VENDOR := MediaTek
 BOARD_CONNECTIVITY_MODULE := conn_soc
