@@ -11,5 +11,24 @@
 # full build
     # brunch cm_phone_pro_qi-eng
 
-This is a device tree for Energy Phone Pro Qi, full functionality with TWRP v2.8.5.0, currently working for ROM compatibility.
+# Functionality
+   [ ] Dual SIM
+   [ ] Wifi
+   [ ] Bluetooth
+   [ ] Audio
+   [ ] Sensors
+   [ ] Camera (photo and video recording)
+   [ ] GPS?
+   [ ] NFC
+   [ ] OTG?
+   [ ] Tethering (Wifi, Bluetooth and USB)
+   [ ] App permissions
+   [X] Touchscreen and hardware buttons
+   [X] Charging and battery measuring
+   [X] TWRP Recovery
+
+
+This is a device tree for Energy Phone Pro Qi, full functionality with TWRP v2.8.5.0, currently working on ROM compatibility.
 TWRP has not been tested fully, expect some minor issues.
+
+Currently booting cm-11.0, expect many problems, only basic things work.
