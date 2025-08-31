@@ -22,7 +22,6 @@
    - [ ] NFC
    - [ ] OTG?
    - [ ] Tethering (Wifi, Bluetooth and USB)
-   - [ ] App permissions
    - [x] Touchscreen and hardware buttons
    - [x] Charging and battery measuring
    - [x] TWRP Recovery

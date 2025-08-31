@@ -1,7 +1,7 @@
-USE_CAMERA_STUB := true
+# USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/energy/phone_pro_qi/AndroidBoardVendor.mk
+-include vendor/energy/phone_pro_qi/BoardConfigVendor.mk
 
 # Device configuration
 TARGET_BOARD_PLATFORM := mt6592
@@ -62,7 +62,7 @@ BOARD_SEPOLICY_UNION := \
        file_contexts
 
 TARGET_PREBUILT_KERNEL := device/energy/phone_pro_qi/kernel
-TARGET_RECOVERY_FSTAB := device/energy/phone_pro_qi/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/energy/phone_pro_qi/rootdir/recovery.fstab
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
@@ -77,29 +77,35 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 
 # MTK Hardware
-MTK_HARDWARE := true
-COMMON_GLOBAL_CFLAGS += -DMTK_HARDWARE -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
-COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE
+# BOARD_HAS_MTK_HARDWARE := true
+# MTK_HARDWARE := true
+# COMMON_GLOBAL_CFLAGS += -DMTK_AUDIO -DMTK_AUDIO_ADPCM_SUPPORT -DHAVE_AEE_FEATURE -DMTK_VIDEO_HEVC_SUPPORT
+# COMMON_GLOBAL_CPPFLAGS += -DMTK_AUDIO -DMTK_AUDIO_ADPCM_SUPPORT -DHAVE_AEE_FEATURE -DMTK_VIDEO_HEVC_SUPPORT
+
 
 # Offline charging
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/BOOT/BOOT/boot/boot_mode
 
-BOARD_RIL_CLASS := ../../../device/energy/phone_pro_qi/ril/
+# BOARD_RIL_CLASS := ../../../device/energy/phone_pro_qi/ril/
 
-BOARD_CONNECTIVITY_VENDOR := MediaTek
-BOARD_CONNECTIVITY_MODULE := conn_soc
+# BOARD_CONNECTIVITY_VENDOR := MediaTek
+# BOARD_CONNECTIVITY_MODULE := conn_soc
 
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # WiFi config
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_mt66xx
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx
-WIFI_DRIVER_FW_PATH_PARAM:="/dev/wmtWifi"
-WIFI_DRIVER_FW_PATH_STA:=STA
-WIFI_DRIVER_FW_PATH_AP:=AP
-WIFI_DRIVER_FW_PATH_P2P:=P2P
+# WPA_SUPPLICANT_VERSION := VER_0_8_X
+# BOARD_HOSTAPD_DRIVER := NL80211
+# BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_mt66xx
+# BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+# BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mt66xx
+# WIFI_DRIVER_FW_PATH_PARAM:="/dev/wmtWifi"
+# WIFI_DRIVER_FW_PATH_STA:=STA
+# WIFI_DRIVER_FW_PATH_AP:=AP
+# WIFI_DRIVER_FW_PATH_P2P:=P2P
 
-# flashing system images doesnt work, missing /system at 0x4B0
+# Bluetooth
+# BOARD_HAVE_BLUETOOTH := true
+# BOARD_HAVE_BLUETOOTH_MTK := true
+# BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
+# BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/energy/phone_pro_qi/bluetooth
