@@ -9,6 +9,9 @@ on init
     mkdir /storage/emulated/0 0771 system media_rw
     mkdir /storage/sdcard1 0771 system media_rw
 
+    # chown /data/media in case of root owns it
+    chown /data/media media_rw:media_rw
+    
     symlink /storage/emulated/0 /sdcard
     symlink /storage/emulated/0 /mnt/sdcard
 
@@ -570,11 +573,8 @@ service MtkCodecService /system/bin/MtkCodecService
 # virtual sdcard daemon running as media_rw (1023)
 service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 /data/media/0 /storage/emulated/0
     class late_start
-    disabled
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
-    disabled
 service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbotg /storage/usbotg
     class late_start
-    disabled
 

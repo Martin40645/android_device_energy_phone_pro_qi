@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    # $(LOCAL_PATH)/configs/agps_profiles_conf.xml:system/etc/agps_profiles_conf.xml
+    $(LOCAL_PATH)/configs/agps_profiles_conf.xml:system/etc/agps_profiles_conf.xml
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -54,13 +54,13 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     # frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     # frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     # frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     # frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     # frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     # frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    # frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     # frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     # frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     # frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
@@ -119,8 +119,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/local_time.default.so:system/lib/hw/local_time.default.so \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so \
     $(LOCAL_PATH)/proprietary/lib/libcam_utils.so:system/lib/libcam_utils.so \
-    $(LOCAL_PATH)/proprietary/lib/libcam.utils.so:system/lib/libcam.utils.so
-    
+    $(LOCAL_PATH)/proprietary/bin/mtk_agpsd:system/bin/mtk_agpsd \
+#copy mnld to gps TODO
 #$(LOCAL_PATH)/proprietary/lib/hw/camera.default.so:system/lib/hw/camera.default.so \
 # NFC
 PRODUCT_PACKAGES += \
